@@ -170,7 +170,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className={`btn btn-gold ${styles.submitBtn}`}
+              className={`btn btn-primary ${styles.submitBtn}`}
               disabled={!isValid || status === 'loading'}
               aria-busy={status === 'loading'}
             >

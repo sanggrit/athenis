@@ -1,44 +1,72 @@
-/* ─── CSS Variables ─────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   DESIGN SYSTEM — "The Digital Curator"
+   Primary: Midnight Blue  ·  Secondary: Champagne Gold
+   Typography: Noto Serif (display) + Manrope (body)
+   Principle: No hard borders · Tonal layering · Ambient light
+═══════════════════════════════════════════════════════════ */
+
 :root {
-  --color-navy: #0d1b2a;
-  --color-navy-light: #132233;
-  --color-navy-mid: #1a3a5c;
+  /* ── Primary (Midnight Blue) ─────────────────────── */
+  --color-primary: #040053;
+  --color-primary-container: #191970;
+  --color-primary-light: #2a2a8a;
+  --color-on-primary: #ffffff;
+
+  /* ── Secondary / Gold ────────────────────────────── */
   --color-gold: #c9a84c;
   --color-gold-light: #e8c97a;
-  --color-gold-dim: rgba(201, 168, 76, 0.15);
-  --color-white: #ffffff;
-  --color-off-white: #f8f9fa;
-  --color-gray-100: #f0f2f5;
-  --color-gray-200: #e2e6ea;
-  --color-gray-400: #adb5bd;
-  --color-gray-600: #6c757d;
-  --color-text: #1a2b3c;
-  --color-text-light: rgba(255, 255, 255, 0.85);
-  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --color-gold-dim: rgba(201, 168, 76, 0.12);
+  --color-secondary: #735c00;
+  --color-secondary-fixed: #ffe088;
 
-  --font-main: 'Pretendard Variable', 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* ── Surface (Warm Off-white) ─────────────────────── */
+  --surface: #faf9f6;
+  --surface-dim: #f0efe9;
+  --surface-container-low: #efeeeb;
+  --surface-container: #e9e8e5;
+  --surface-container-high: #e3e2df;
+  --surface-container-highest: #dddcda;
+  --surface-lowest: #ffffff;
 
+  /* ── Text ─────────────────────────────────────────── */
+  --on-surface: #1a1c1a;
+  --on-surface-variant: #464651;
+  --outline-variant: rgba(70, 70, 81, 0.14);
+
+  /* ── On-dark text ─────────────────────────────────── */
+  --on-dark-high: rgba(255, 255, 255, 0.92);
+  --on-dark-mid: rgba(255, 255, 255, 0.62);
+  --on-dark-low: rgba(255, 255, 255, 0.38);
+
+  /* ── Typography ───────────────────────────────────── */
+  --font-display: 'Noto Serif', 'Noto Serif KR', Georgia, serif;
+  --font-body: 'Manrope', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+
+  /* ── Spacing ──────────────────────────────────────── */
   --section-py: 120px;
   --container-max: 1280px;
-  --container-px: clamp(20px, 5vw, 80px);
+  --container-px: clamp(24px, 5vw, 80px);
 
+  /* ── Shape ────────────────────────────────────────── */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
 
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.14);
+  /* ── Ambient Elevation (no hard shadows) ──────────── */
+  --shadow-ambient: 0 8px 48px rgba(26, 28, 26, 0.05);
+  --shadow-ambient-md: 0 16px 64px rgba(26, 28, 26, 0.07);
+  --shadow-ambient-float: 0 32px 80px rgba(26, 28, 26, 0.06);
 
-  --transition: 0.25s ease;
+  /* ── Transitions (slow-in, slow-out per spec) ─────── */
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Hero background — replace URL to swap image */
+  /* ── Hero bg image (swap to override gradient) ────── */
   --hero-bg-image: none;
 }
 
-/* ─── Reset ─────────────────────────────────────────────── */
-*,
-*::before,
-*::after {
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -47,102 +75,126 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: var(--font-main);
-  color: var(--color-text);
-  background: var(--color-white);
-  line-height: 1.7;
+  font-family: var(--font-body);
+  color: var(--on-surface);
+  background: var(--surface);
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: var(--font-main);
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-/* ─── Container ─────────────────────────────────────────── */
+/* ── Container ───────────────────────────────────────── */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-px);
 }
 
-/* ─── Section ───────────────────────────────────────────── */
+/* ── Section ─────────────────────────────────────────── */
 .section {
   padding: var(--section-py) 0;
 }
 
+/* ── Section Label — gold bar + spaced caps ───────────── */
 .section-label {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: clamp(28px, 4vw, 44px);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
   font-weight: 700;
-  line-height: 1.2;
-  color: var(--color-navy);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
   margin-bottom: 20px;
 }
 
+.section-label::before {
+  content: '';
+  flex-shrink: 0;
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--color-secondary-fixed);
+  border-radius: 2px;
+}
+
+/* ── Section Title (Noto Serif editorial) ─────────────── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.8vw, 44px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
 .section-title--light {
-  color: var(--color-white);
+  color: var(--on-dark-high);
 }
 
-.section-sub {
-  font-size: 17px;
-  color: var(--color-gray-600);
-  max-width: 580px;
-  line-height: 1.75;
-}
-
-/* ─── Buttons ───────────────────────────────────────────── */
+/* ── Buttons (structured elegance — avoid pill shapes) ── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 14px 28px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   border-radius: var(--radius-sm);
   transition: var(--transition);
-  letter-spacing: 0.02em;
   white-space: nowrap;
+  min-height: 48px;
+  min-width: 48px;
+  position: relative;
 }
 
+/* Primary: dark gradient — use on light backgrounds */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+  color: var(--on-primary);
+  box-shadow: 0 4px 20px rgba(4, 0, 83, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(4, 0, 83, 0.38);
+}
+
+.btn-primary:active { transform: translateY(0); }
+
+/* Gold — for dark backgrounds */
 .btn-gold {
   background: var(--color-gold);
-  color: var(--color-navy);
+  color: var(--color-primary);
+  font-weight: 800;
 }
 
 .btn-gold:hover {
   background: var(--color-gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.35);
+  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.38);
 }
 
+.btn-gold:active { transform: translateY(0); }
+
+/* Outline */
 .btn-outline {
-  border: 2px solid var(--color-gold);
+  border: 1.5px solid var(--color-gold);
   color: var(--color-gold);
   background: transparent;
 }
@@ -153,8 +205,8 @@ button {
 }
 
 .btn-outline--light {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--on-dark-high);
 }
 
 .btn-outline--light:hover {
@@ -163,21 +215,14 @@ button {
   background: var(--color-gold-dim);
 }
 
-/* ─── Scrollbar ─────────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-gray-400);
-  border-radius: 3px;
-}
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--surface-container-low); }
+::-webkit-scrollbar-thumb { background: var(--on-surface-variant); border-radius: 3px; opacity: 0.3; }
 
-/* ─── Responsive Utilities ──────────────────────────────── */
+/* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 767px) {
   :root {
-    --section-py: 72px;
+    --section-py: 80px;
   }
 }
