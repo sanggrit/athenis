@@ -142,16 +142,26 @@ export default function DowmiBrand() {
           </div>
         </div>
 
-        <figure className={styles.bestsellerBlock}>
-          <img
-            src="/images/bestseller.png"
-            alt={t('dowmi.bestseller_caption')}
-            className={styles.bestsellerImg}
-          />
-          <figcaption className={styles.bestsellerCaption}>
-            {t('dowmi.bestseller_caption')}
-          </figcaption>
-        </figure>
+        <div className={styles.ranksGallery}>
+          {[
+            { src: '/images/rank-us-bestseller.png', captionKey: 'rank_us_bestseller_caption' },
+            { src: '/images/rank-us-gift.png',       captionKey: 'rank_us_gift_caption' },
+            { src: '/images/rank-japan.png',          captionKey: 'rank_japan_caption' },
+          ].map(({ src, captionKey }) => (
+            <figure key={captionKey} className={styles.rankCard}>
+              <div className={styles.rankImgWrap}>
+                <img
+                  src={src}
+                  alt={t(`dowmi.${captionKey}`)}
+                  className={styles.rankImg}
+                />
+              </div>
+              <figcaption className={styles.rankCaption}>
+                {t(`dowmi.${captionKey}`)}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
 
         <div className={styles.products}>
           {PRODUCTS.map((product) => (

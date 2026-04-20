@@ -45,29 +45,42 @@
   max-width: 600px;
 }
 
-/* ─── Bestseller screenshot ──────────────────────────────── */
-.bestsellerBlock {
-  margin: 0 0 56px;
+/* ─── Rankings gallery ───────────────────────────────────── */
+.ranksGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.rankCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-.bestsellerImg {
+.rankImgWrap {
   width: 100%;
-  max-width: 900px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  display: block;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  overflow: hidden;
+  background: #fff;
 }
 
-.bestsellerCaption {
-  font-size: 14px;
+.rankImg {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.rankCaption {
+  font-size: 13px;
+  font-weight: 600;
   color: var(--color-gold);
-  font-weight: 500;
-  letter-spacing: 0.02em;
   text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 /* ─── Products grid ──────────────────────────────────────── */
@@ -225,7 +238,8 @@
     gap: 12px;
   }
 
-  .bestsellerBlock {
+  .ranksGallery {
+    grid-template-columns: 1fr;
     margin-bottom: 40px;
   }
 }
