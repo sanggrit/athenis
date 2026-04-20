@@ -7,13 +7,13 @@
   },
   "hero": {
     "slogan": "Innovation for Better Living",
-    "sub": "Premium care brand for seniors and the underserved",
+    "sub": "Global premium care, designed for real life",
     "cta_dowmi": "Explore DOWMI",
     "cta_contact": "Partner With Us"
   },
   "about": {
     "section_label": "About Athenis",
-    "mission": "We solve discomfort, putting customer happiness first",
+    "mission": "We make products for a more comfortable everyday life",
     "card_dev": "Product Development",
     "card_dev_desc": "Researching and developing innovative customer-centric products",
     "card_design": "Design",
@@ -26,12 +26,12 @@
   "dowmi": {
     "section_label": "DOWMI Brand",
     "title": "DOWMI",
-    "description": "DOWMI is a premium silver care brand dedicated to making daily life more convenient and safe for seniors and the underserved. Loved by customers worldwide for innovative design and superior quality.",
+    "description": "DOWMI is a global premium care brand built around solving the everyday discomforts that matter most. Loved by customers worldwide for innovative design and superior quality.",
     "badge": "Amazon Best Seller",
     "p1_name": "Premium Care Product 1",
     "p1_desc": "An innovative care solution that eliminates everyday discomfort",
     "p2_name": "Premium Care Product 2",
-    "p2_desc": "Products designed for safe and convenient senior living",
+    "p2_desc": "Products designed for safe and comfortable everyday living",
     "p3_name": "Premium Care Product 3",
     "p3_desc": "Premium care items crafted from the finest materials",
     "cta": "Visit Amazon Store"
