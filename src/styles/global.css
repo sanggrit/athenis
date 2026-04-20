@@ -1,46 +1,45 @@
 /* ═══════════════════════════════════════════════════════════
-   DESIGN SYSTEM — "The Digital Curator"
-   Primary: Midnight Blue  ·  Secondary: Champagne Gold
-   Typography: Noto Serif (display) + Manrope (body)
+   DESIGN SYSTEM — "The Curated Sanctuary"
+   Primary: Charcoal  ·  Secondary: Spa-Sage
+   Typography: Manrope (display) + Inter (body)
    Principle: No hard borders · Tonal layering · Ambient light
 ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Primary (Midnight Blue) ─────────────────────── */
-  --color-primary: #040053;
-  --color-primary-container: #191970;
-  --color-primary-light: #2a2a8a;
+  /* ── Primary (Charcoal) ──────────────────────────────── */
+  --color-primary: #212b3a;
+  --color-primary-container: #374151;
+  --color-primary-light: #4b5563;
   --color-on-primary: #ffffff;
 
-  /* ── Secondary / Gold ────────────────────────────── */
-  --color-gold: #c9a84c;
-  --color-gold-light: #e8c97a;
-  --color-gold-dim: rgba(201, 168, 76, 0.12);
-  --color-secondary: #735c00;
-  --color-secondary-fixed: #ffe088;
+  /* ── Secondary / Spa-Sage ────────────────────────────── */
+  --color-secondary: #506859;
+  --color-secondary-container: #cbe6d4;
+  --color-secondary-fixed: #d4eddc;
+  --color-secondary-dim: rgba(203, 230, 212, 0.18);
 
-  /* ── Surface (Warm Off-white) ─────────────────────── */
-  --surface: #faf9f6;
-  --surface-dim: #f0efe9;
-  --surface-container-low: #efeeeb;
-  --surface-container: #e9e8e5;
-  --surface-container-high: #e3e2df;
-  --surface-container-highest: #dddcda;
+  /* ── Surface (Warm Off-white) ─────────────────────────── */
+  --surface: #f9f9f7;
+  --surface-dim: #f1f1ef;
+  --surface-container-low: #f4f4f2;
+  --surface-container: #ededeb;
+  --surface-container-high: #e6e6e4;
+  --surface-container-highest: #dfdfdd;
   --surface-lowest: #ffffff;
 
   /* ── Text ─────────────────────────────────────────── */
   --on-surface: #1a1c1a;
-  --on-surface-variant: #464651;
-  --outline-variant: rgba(70, 70, 81, 0.14);
+  --on-surface-variant: #4b5563;
+  --outline-variant: rgba(75, 85, 99, 0.14);
 
   /* ── On-dark text ─────────────────────────────────── */
   --on-dark-high: rgba(255, 255, 255, 0.92);
-  --on-dark-mid: rgba(255, 255, 255, 0.62);
-  --on-dark-low: rgba(255, 255, 255, 0.38);
+  --on-dark-mid: rgba(255, 255, 255, 0.60);
+  --on-dark-low: rgba(255, 255, 255, 0.36);
 
   /* ── Typography ───────────────────────────────────── */
-  --font-display: 'Noto Serif', 'Noto Serif KR', Georgia, serif;
-  --font-body: 'Manrope', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  --font-display: 'Manrope', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  --font-body: 'Inter', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
 
   /* ── Spacing ──────────────────────────────────────── */
   --section-py: 120px;
@@ -53,15 +52,15 @@
   --radius-lg: 20px;
 
   /* ── Ambient Elevation (no hard shadows) ──────────── */
-  --shadow-ambient: 0 8px 48px rgba(26, 28, 26, 0.05);
-  --shadow-ambient-md: 0 16px 64px rgba(26, 28, 26, 0.07);
-  --shadow-ambient-float: 0 32px 80px rgba(26, 28, 26, 0.06);
+  --shadow-ambient: 0 8px 48px rgba(33, 43, 58, 0.05);
+  --shadow-ambient-md: 0 16px 64px rgba(33, 43, 58, 0.08);
+  --shadow-ambient-float: 0 32px 80px rgba(33, 43, 58, 0.07);
 
-  /* ── Transitions (slow-in, slow-out per spec) ─────── */
+  /* ── Transitions ──────────────────────────────────── */
   --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* ── Hero bg image (swap to override gradient) ────── */
+  /* ── Hero bg image ────────────────────────────────── */
   --hero-bg-image: none;
 }
 
@@ -104,7 +103,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   padding: var(--section-py) 0;
 }
 
-/* ── Section Label — gold bar + spaced caps ───────────── */
+/* ── Section Label — sage bar + spaced caps ───────────── */
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -124,16 +123,16 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   display: block;
   width: 28px;
   height: 2px;
-  background: var(--color-secondary-fixed);
+  background: var(--color-secondary-container);
   border-radius: 2px;
 }
 
-/* ── Section Title (Noto Serif editorial) ─────────────── */
+/* ── Section Title ─────────────────────────────────────── */
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(28px, 3.8vw, 44px);
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.15;
   color: var(--color-primary);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
@@ -143,7 +142,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   color: var(--on-dark-high);
 }
 
-/* ── Buttons (structured elegance — avoid pill shapes) ── */
+/* ── Buttons ──────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -163,44 +162,44 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   position: relative;
 }
 
-/* Primary: dark gradient — use on light backgrounds */
+/* Primary: charcoal — use on light backgrounds */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
   color: var(--on-primary);
-  box-shadow: 0 4px 20px rgba(4, 0, 83, 0.28);
+  box-shadow: 0 4px 20px rgba(33, 43, 58, 0.28);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 36px rgba(4, 0, 83, 0.38);
+  box-shadow: 0 10px 36px rgba(33, 43, 58, 0.38);
 }
 
 .btn-primary:active { transform: translateY(0); }
 
-/* Gold — for dark backgrounds */
+/* Sage — for dark/charcoal backgrounds */
 .btn-gold {
-  background: var(--color-gold);
+  background: var(--color-secondary-container);
   color: var(--color-primary);
   font-weight: 800;
 }
 
 .btn-gold:hover {
-  background: var(--color-gold-light);
+  background: var(--color-secondary-fixed);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.38);
+  box-shadow: 0 8px 28px rgba(80, 104, 89, 0.28);
 }
 
 .btn-gold:active { transform: translateY(0); }
 
 /* Outline */
 .btn-outline {
-  border: 1.5px solid var(--color-gold);
-  color: var(--color-gold);
+  border: 1.5px solid var(--color-secondary-container);
+  color: var(--color-secondary-container);
   background: transparent;
 }
 
 .btn-outline:hover {
-  background: var(--color-gold-dim);
+  background: var(--color-secondary-dim);
   transform: translateY(-2px);
 }
 
@@ -210,9 +209,9 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 .btn-outline--light:hover {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
-  background: var(--color-gold-dim);
+  border-color: var(--color-secondary-container);
+  color: var(--color-secondary-container);
+  background: var(--color-secondary-dim);
 }
 
 /* ── Scrollbar ───────────────────────────────────────── */

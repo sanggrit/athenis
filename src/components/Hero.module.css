@@ -1,4 +1,4 @@
-/* Dark editorial hero — gradient from primary to primary_container */
+/* Dark editorial hero — charcoal gradient */
 .hero {
   position: relative;
   min-height: 100dvh;
@@ -17,12 +17,12 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 65% 25%, rgba(201, 168, 76, 0.07) 0%, transparent 55%),
-    linear-gradient(155deg, #040053 0%, #191970 55%, #0d0d50 100%);
+    radial-gradient(ellipse at 65% 25%, rgba(203, 230, 212, 0.06) 0%, transparent 55%),
+    linear-gradient(155deg, #212b3a 0%, #374151 55%, #1a2230 100%);
   z-index: 0;
 }
 
-/* Oversized decorative letterform — "The Rule of Asymmetry" */
+/* Oversized decorative letterform */
 .hero::after {
   content: 'DOWMI';
   position: absolute;
@@ -30,7 +30,7 @@
   bottom: -30px;
   font-family: var(--font-display);
   font-size: clamp(100px, 18vw, 240px);
-  font-weight: 700;
+  font-weight: 800;
   color: rgba(255, 255, 255, 0.025);
   letter-spacing: 0.06em;
   white-space: nowrap;
@@ -47,7 +47,7 @@
   padding-bottom: 60px;
 }
 
-/* Eyebrow — gold bar prefix */
+/* Eyebrow — sage bar prefix */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -57,7 +57,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-secondary-container);
   margin-bottom: 28px;
 }
 
@@ -67,15 +67,15 @@
   display: block;
   width: 28px;
   height: 2px;
-  background: var(--color-secondary-fixed);
+  background: var(--color-secondary-container);
   border-radius: 2px;
 }
 
-/* Display headline — Noto Serif editorial */
+/* Display headline — Manrope editorial */
 .slogan {
   font-family: var(--font-display);
   font-size: clamp(36px, 6.5vw, 76px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: var(--on-dark-high);
@@ -111,7 +111,7 @@
   display: block;
   width: 1px;
   height: 56px;
-  background: linear-gradient(to bottom, transparent, rgba(201, 168, 76, 0.7), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(203, 230, 212, 0.6), transparent);
   animation: pulse 2.4s ease-in-out infinite;
 }
 

@@ -1,9 +1,9 @@
-/* Light tonal section — surface_container_low as canvas */
+/* Light tonal section — sage-tinted canvas */
 .about {
   background: var(--surface-container-low);
 }
 
-/* Mission — Noto Serif display, breathing room */
+/* Mission — Manrope display, breathing room */
 .mission {
   max-width: 680px;
   margin-bottom: 72px;
@@ -18,13 +18,12 @@
   gap: 20px;
 }
 
-/* Cards: surface_container_lowest on surface_container_low — no borders, ambient shadow */
+/* Cards: ambient shadow only, no borders */
 .card {
   background: var(--surface-lowest);
   border-radius: var(--radius-md);
   padding: 36px 28px 32px;
   box-shadow: var(--shadow-ambient);
-  /* Ghost border fallback — outline_variant at 14% opacity only */
   outline: 1px solid var(--outline-variant);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -34,7 +33,7 @@
   box-shadow: var(--shadow-ambient-md);
 }
 
-/* Icon — gold accent as "jewelry for the interface" */
+/* Icon — sage accent */
 .cardIcon {
   color: var(--color-secondary);
   margin-bottom: 22px;
@@ -43,15 +42,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 224, 136, 0.25), rgba(201, 168, 76, 0.08));
+  background: linear-gradient(135deg, rgba(212, 237, 220, 0.4), rgba(80, 104, 89, 0.08));
   border-radius: var(--radius-sm);
 }
 
-/* Noto Serif for card titles — editorial weight */
+/* Manrope for card titles */
 .cardTitle {
   font-family: var(--font-display);
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 10px;
   line-height: 1.3;
