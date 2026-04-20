@@ -1,6 +1,84 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './DowmiBrand.module.css'
+
+const RANKS = [
+  { src: '/images/rank-us-bestseller.png', captionKey: 'rank_us_bestseller_caption' },
+  { src: '/images/rank-us-gift.png',       captionKey: 'rank_us_gift_caption' },
+  { src: '/images/rank-japan.png',         captionKey: 'rank_japan_caption' },
+]
+
+function RanksCarousel() {
+  const { t } = useTranslation()
+  const [current, setCurrent] = useState(0)
+  const touchStartX = useRef(null)
+  const total = RANKS.length
+
+  const prev = () => setCurrent((c) => (c - 1 + total) % total)
+  const next = () => setCurrent((c) => (c + 1) % total)
+
+  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev()
+    touchStartX.current = null
+  }
+
+  return (
+    <div className={styles.carouselOuter}>
+      <div
+        className={styles.carouselViewport}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div
+          className={styles.carouselTrack}
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {RANKS.map(({ src, captionKey }) => (
+            <figure key={captionKey} className={styles.carouselSlide}>
+              <div className={styles.rankImgWrap}>
+                <img
+                  src={src}
+                  alt={t(`dowmi.${captionKey}`)}
+                  className={styles.rankImg}
+                />
+              </div>
+              <figcaption className={styles.rankCaption}>
+                {t(`dowmi.${captionKey}`)}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+
+      <button className={`${styles.carouselBtn} ${styles.carouselBtnPrev}`} onClick={prev} aria-label="이전 슬라이드">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+          <path d="M9 1L1 9l8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      <button className={`${styles.carouselBtn} ${styles.carouselBtnNext}`} onClick={next} aria-label="다음 슬라이드">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+          <path d="M1 1l8 8-8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+
+      <div className={styles.carouselDots} role="tablist" aria-label="슬라이드 선택">
+        {RANKS.map((_, i) => (
+          <button
+            key={i}
+            role="tab"
+            className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
+            onClick={() => setCurrent(i)}
+            aria-label={`${i + 1}번째 슬라이드`}
+            aria-selected={i === current}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const PRODUCTS = [
   {
@@ -142,26 +220,7 @@ export default function DowmiBrand() {
           </div>
         </div>
 
-        <div className={styles.ranksGallery}>
-          {[
-            { src: '/images/rank-us-bestseller.png', captionKey: 'rank_us_bestseller_caption' },
-            { src: '/images/rank-us-gift.png',       captionKey: 'rank_us_gift_caption' },
-            { src: '/images/rank-japan.png',          captionKey: 'rank_japan_caption' },
-          ].map(({ src, captionKey }) => (
-            <figure key={captionKey} className={styles.rankCard}>
-              <div className={styles.rankImgWrap}>
-                <img
-                  src={src}
-                  alt={t(`dowmi.${captionKey}`)}
-                  className={styles.rankImg}
-                />
-              </div>
-              <figcaption className={styles.rankCaption}>
-                {t(`dowmi.${captionKey}`)}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <RanksCarousel />
 
         <div className={styles.products}>
           {PRODUCTS.map((product) => (
