@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 import styles from './Contact.module.css'
 
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID || ''
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID || 'xgorznre'
 const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
-const IS_DEV = !FORMSPREE_ID || !RECAPTCHA_KEY
+const HAS_RECAPTCHA = !!RECAPTCHA_KEY
 
 const INITIAL_FORM = { name: '', email: '', inquiryType: '', message: '' }
 
@@ -13,7 +13,7 @@ export default function Contact() {
   const { t } = useTranslation()
   const recaptchaRef = useRef(null)
   const [form, setForm] = useState(INITIAL_FORM)
-  const [recaptchaValue, setRecaptchaValue] = useState(IS_DEV ? 'dev' : '')
+  const [recaptchaValue, setRecaptchaValue] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
 
   const handleChange = (e) => {
@@ -25,26 +25,21 @@ export default function Contact() {
     form.email.trim() &&
     form.inquiryType &&
     form.message.trim() &&
-    recaptchaValue
+    (!HAS_RECAPTCHA || recaptchaValue)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!isValid) return
     setStatus('loading')
 
-    if (IS_DEV) {
-      setTimeout(() => {
-        setStatus('success')
-        setForm(INITIAL_FORM)
-      }, 800)
-      return
-    }
-
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, 'g-recaptcha-response': recaptchaValue }),
+        body: JSON.stringify({
+          ...form,
+          ...(recaptchaValue && { 'g-recaptcha-response': recaptchaValue }),
+        }),
       })
       if (res.ok) {
         setStatus('success')
@@ -67,7 +62,7 @@ export default function Contact() {
             <p className="section-label">{t('contact.section_label')}</p>
             <h2 className="section-title">{t('contact.title')}</h2>
             <p className={styles.sub}>{t('contact.sub')}</p>
-            {IS_DEV && (
+            {!HAS_RECAPTCHA && (
               <p className={styles.devNote} aria-live="polite">
                 ⚙ {t('contact.dev_mode')}
               </p>
@@ -146,7 +141,7 @@ export default function Contact() {
               />
             </div>
 
-            {!IS_DEV && (
+            {HAS_RECAPTCHA && (
               <div className={styles.recaptcha}>
                 <ReCAPTCHA
                   ref={recaptchaRef}
