@@ -91,7 +91,7 @@ const PRODUCTS = [
   },
   {
     key: 'p2',
-    image: '/images/product2.jpg',
+    image: '/images/product2.webp',
     link: 'https://www.amazon.com/dp/B0DCVKMCLQ',
     price: null,
     rating: null,
