@@ -1,0 +1,124 @@
+.dowmi {
+  background: var(--color-navy);
+}
+
+.header {
+  margin-bottom: 56px;
+}
+
+.headerText {
+  max-width: 680px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 0 !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+  margin-top: 4px;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* Products */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.productCard {
+  background: var(--color-navy-light);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.productCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.productImage {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #132233, #1a3a5c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.imagePlaceholderText {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.08em;
+}
+
+.productInfo {
+  padding: 24px;
+}
+
+.productName {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.productDesc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "brand": "Brand",
+    "dowmi": "DOWMI",
+    "business": "Business",
+    "contact": "Contact"
+  },
+  "hero": {
+    "slogan": "Innovation for Better Living",
+    "sub": "Premium care brand for seniors and the underserved",
+    "cta_dowmi": "Explore DOWMI",
+    "cta_contact": "Partner With Us"
+  },
+  "about": {
+    "section_label": "About Athenis",
+    "mission": "We solve discomfort, putting customer happiness first",
+    "card_dev": "Product Development",
+    "card_dev_desc": "Researching and developing innovative customer-centric products",
+    "card_design": "Design",
+    "card_design_desc": "Product design embodying premium brand identity",
+    "card_production": "Production & Distribution",
+    "card_production_desc": "Efficient production management and global distribution network",
+    "card_ecommerce": "E-Commerce B2C",
+    "card_ecommerce_desc": "Global B2C direct sales centered on Amazon"
+  },
+  "dowmi": {
+    "section_label": "DOWMI Brand",
+    "title": "DOWMI",
+    "description": "DOWMI is a premium silver care brand dedicated to making daily life more convenient and safe for seniors and the underserved. Loved by customers worldwide for innovative design and superior quality.",
+    "badge": "Amazon Best Seller",
+    "p1_name": "Premium Care Product 1",
+    "p1_desc": "An innovative care solution that eliminates everyday discomfort",
+    "p2_name": "Premium Care Product 2",
+    "p2_desc": "Products designed for safe and convenient senior living",
+    "p3_name": "Premium Care Product 3",
+    "p3_desc": "Premium care items crafted from the finest materials",
+    "cta": "Visit Amazon Store"
+  },
+  "business": {
+    "section_label": "Business Areas",
+    "title": "What We Do",
+    "b1_title": "Idea Product Sourcing",
+    "b1_desc1": "We identify innovative products by analyzing market needs.",
+    "b1_desc2": "We source competitive products aligned with global trends.",
+    "b2_title": "Open to Product Proposals",
+    "b2_desc1": "We actively review product proposals from partners and individuals.",
+    "b2_desc2": "We welcome product partnerships for mutual growth.",
+    "b3_title": "Direct Sales Channel",
+    "b3_desc1": "We sell directly via global marketplaces including Amazon.",
+    "b3_desc2": "Leveraging B2C expertise to implement optimal sales strategies."
+  },
+  "why": {
+    "section_label": "Why DOWMI",
+    "title": "DOWMI by the Numbers",
+    "w1_label": "Amazon Best Seller",
+    "w1_value": "Best Seller",
+    "w2_label": "Countries",
+    "w2_value": "N+",
+    "w3_label": "Total Reviews",
+    "w3_value": "N+",
+    "w4_label": "Product Categories",
+    "w4_value": "N+"
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title": "Get in Touch",
+    "sub": "Reach out for product proposals, distribution partnerships, media inquiries, and more.",
+    "name": "Name",
+    "name_placeholder": "John Doe",
+    "email": "Email",
+    "email_placeholder": "example@email.com",
+    "inquiry_type": "Inquiry Type",
+    "type_default": "Select inquiry type",
+    "type_product": "Product Proposal",
+    "type_distribution": "Distribution & Partnership",
+    "type_media": "Media & PR",
+    "type_other": "Other",
+    "message": "Message",
+    "message_placeholder": "Please describe your inquiry in detail",
+    "submit": "Send Inquiry",
+    "submitting": "Sending...",
+    "success": "Your inquiry has been received. We'll be in touch shortly.",
+    "error": "Failed to send inquiry. Please try again later.",
+    "recaptcha_hint": "Please complete the reCAPTCHA",
+    "dev_mode": "Dev mode — Formspree/reCAPTCHA disabled"
+  },
+  "footer": {
+    "company": "Athenis",
+    "business_info": "Business Reg. No.: 000-00-00000 | CEO: Gildong Hong",
+    "address": "Gangnam-gu, Seoul, South Korea (address TBD)",
+    "privacy": "Privacy Policy",
+    "amazon": "Amazon Store",
+    "instagram": "Instagram",
+    "copyright": "© 2026 Athenis. All rights reserved."
+  }
+}

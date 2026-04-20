@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: var(--hero-bg-image);
+  background-color: var(--color-navy);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Gradient overlay — shown when no bg image is set */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 27, 42, 0.95) 0%,
+    rgba(26, 58, 92, 0.8) 50%,
+    rgba(13, 27, 42, 0.9) 100%
+  );
+  z-index: 0;
+}
+
+/* Decorative radial glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 24px;
+}
+
+.slogan {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-white);
+  max-width: 760px;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--color-text-light);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Scroll hint */
+.scrollHint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  animation: scrollAnim 2s ease-in-out infinite;
+}
+
+@keyframes scrollAnim {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .content {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .slogan {
+    max-width: 100%;
+  }
+
+  .sub {
+    max-width: 100%;
+  }
+
+  .ctas {
+    justify-content: center;
+  }
+
+  .scrollHint {
+    display: none;
+  }
+}
