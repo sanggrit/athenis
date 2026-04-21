@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './Header.module.css'
 
@@ -13,10 +13,9 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const toggleLang = () => {
-    const next = i18n.language === 'ko' ? 'en' : 'ko'
-    i18n.changeLanguage(next)
-    localStorage.setItem('lang', next)
+  const setLang = (lang) => {
+    i18n.changeLanguage(lang)
+    localStorage.setItem('lang', lang)
   }
 
   const scrollTo = (id) => {
@@ -53,21 +52,20 @@ export default function Header() {
 
         <div className={styles.actions}>
           <div className={styles.langToggle} role="group" aria-label="언어 선택">
-            <button
-              className={`${styles.langBtn} ${i18n.language === 'ko' ? styles.langActive : ''}`}
-              onClick={() => { i18n.changeLanguage('ko'); localStorage.setItem('lang', 'ko') }}
-              aria-pressed={i18n.language === 'ko'}
-            >
-              KO
-            </button>
-            <span className={styles.langDivider} aria-hidden="true">|</span>
-            <button
-              className={`${styles.langBtn} ${i18n.language === 'en' ? styles.langActive : ''}`}
-              onClick={() => { i18n.changeLanguage('en'); localStorage.setItem('lang', 'en') }}
-              aria-pressed={i18n.language === 'en'}
-            >
-              EN
-            </button>
+            {['ko', 'en', 'zh'].map((lang, idx, arr) => (
+              <Fragment key={lang}>
+                <button
+                  className={`${styles.langBtn} ${i18n.language === lang ? styles.langActive : ''}`}
+                  onClick={() => setLang(lang)}
+                  aria-pressed={i18n.language === lang}
+                >
+                  {lang.toUpperCase()}
+                </button>
+                {idx < arr.length - 1 && (
+                  <span className={styles.langDivider} aria-hidden="true">|</span>
+                )}
+              </Fragment>
+            ))}
           </div>
 
           <button

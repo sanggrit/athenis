@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "brand": "品牌",
+    "dowmi": "DOWMI",
+    "business": "业务",
+    "contact": "联系"
+  },
+  "hero": {
+    "slogan": "创新，让生活更美好",
+    "sub": "专为日常生活设计的全球高端护理产品",
+    "cta_dowmi": "探索 DOWMI",
+    "cta_contact": "商务合作咨询"
+  },
+  "about": {
+    "section_label": "About Athenis",
+    "mission": "致力于打造让日常生活更舒适的产品",
+    "card_dev": "产品研发",
+    "card_dev_desc": "以客户为中心，研究并开发创新型产品",
+    "card_design": "设计",
+    "card_design_desc": "融合高端品牌理念的产品设计",
+    "card_production": "生产与分销",
+    "card_production_desc": "高效的生产管理与全球分销网络",
+    "card_ecommerce": "电子商务",
+    "card_ecommerce_desc": "以亚马逊为核心的全球B2C直销"
+  },
+  "dowmi": {
+    "section_label": "DOWMI 品牌",
+    "title": "DOWMI",
+    "description": "DOWMI 是一个专注于解决日常生活不便的全球高端护理品牌。凭借创新设计与卓越品质，深受全球消费者喜爱与信赖。",
+    "badge": "亚马逊畅销榜",
+    "rank_us_bestseller_caption": "美国亚马逊类目畅销第 1 名",
+    "rank_us_gift_caption": "美国亚马逊礼品类目第 1 名",
+    "rank_japan_caption": "日本亚马逊类目第 6 名",
+    "p1_name": "DOWMI 背部乳液涂抹器",
+    "p1_desc": "可折叠长柄涂抹器，轻松涂抹背部乳液。含 2 种可水洗垫，适用于乳液、防晒霜及软膏。",
+    "p2_name": "DOWMI 头皮按摩洗发刷",
+    "p2_desc": "硅胶软刷毛头皮按摩器，洗发时深层清洁头皮，促进血液循环。",
+    "p3_name": "DOWMI 乳液涂抹器替换垫",
+    "p3_desc": "适配 DOWMI 乳液涂抹器的专用替换垫。",
+    "view_on_amazon": "在亚马逊查看",
+    "reviews": "条评价",
+    "cta": "访问亚马逊店铺"
+  },
+  "business": {
+    "section_label": "业务领域",
+    "title": "我们的业务",
+    "b1_title": "创意产品采购",
+    "b1_desc1": "通过分析市场需求，发掘创新型潜力产品。",
+    "b1_desc2": "采购符合全球趋势的高竞争力产品。",
+    "b2_title": "开放产品合作提案",
+    "b2_desc1": "积极审阅来自合作伙伴及个人的产品提案。",
+    "b2_desc2": "欢迎携手共赢的产品合作伙伴关系。",
+    "b3_title": "直销渠道",
+    "b3_desc1": "通过亚马逊等全球电商平台直接面向消费者销售。",
+    "b3_desc2": "凭借 B2C 专业经验，实现最优销售策略。"
+  },
+  "why": {
+    "section_label": "Why DOWMI",
+    "title": "数据见证 DOWMI",
+    "w1_label": "亚马逊畅销榜",
+    "w1_value": "畅销冠军",
+    "w2_label": "销售国家",
+    "w2_value": "N+ 国",
+    "w3_label": "累计评价",
+    "w3_value": "N+ 条",
+    "w4_label": "产品类目",
+    "w4_value": "N 个"
+  },
+  "contact": {
+    "section_label": "联系我们",
+    "title": "联系我们",
+    "sub": "欢迎就产品合作、分销合作、媒体合作等事宜与我们联系。",
+    "name": "姓名",
+    "name_placeholder": "请输入姓名",
+    "email": "电子邮件",
+    "email_placeholder": "example@email.com",
+    "inquiry_type": "咨询类型",
+    "type_default": "请选择咨询类型",
+    "type_product": "产品合作",
+    "type_distribution": "分销与合作",
+    "type_media": "媒体与公关",
+    "type_other": "其他",
+    "message": "留言内容",
+    "message_placeholder": "请详细描述您的咨询内容",
+    "submit": "发送咨询",
+    "submitting": "发送中…",
+    "success": "您的咨询已成功提交，我们将尽快与您联系。",
+    "error": "发送失败，请稍后重试。",
+    "recaptcha_hint": "请完成 reCAPTCHA 验证",
+    "dev_mode": "开发环境 — Formspree/reCAPTCHA 已禁用"
+  },
+  "footer": {
+    "company": "Athenis 株式会社",
+    "business_info": "Athenis 株式会社 | 代表：양현웅 | 法人注册号：000-00-00000",
+    "address": "韩国仁川广域市延寿区中央路 313，C1109 (22006) | contact@athenis.co.kr",
+    "privacy": "隐私政策",
+    "amazon": "亚马逊店铺",
+    "instagram": "Instagram",
+    "copyright": "© 2026 Athenis. All rights reserved."
+  }
+}

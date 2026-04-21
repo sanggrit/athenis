@@ -39,8 +39,8 @@
   --on-dark-low: rgba(255, 255, 255, 0.30);
 
   /* ── Typography ───────────────────────────────────────── */
-  --font-display: 'Manrope', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
-  --font-body: 'Inter', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  --font-display: 'Manrope', 'Noto Sans SC', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  --font-body: 'Inter', 'Noto Sans SC', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
 
   /* ── Spacing ──────────────────────────────────────────── */
   --section-py: 120px;
