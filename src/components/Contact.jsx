@@ -62,11 +62,6 @@ export default function Contact() {
             <p className="section-label">{t('contact.section_label')}</p>
             <h2 className="section-title">{t('contact.title')}</h2>
             <p className={styles.sub}>{t('contact.sub')}</p>
-            {!HAS_RECAPTCHA && (
-              <p className={styles.devNote} aria-live="polite">
-                ⚙ {t('contact.dev_mode')}
-              </p>
-            )}
           </div>
 
           <form className={styles.form} onSubmit={handleSubmit} noValidate>

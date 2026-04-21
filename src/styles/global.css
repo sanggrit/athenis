@@ -1,66 +1,67 @@
 /* ═══════════════════════════════════════════════════════════
-   DESIGN SYSTEM — "The Curated Sanctuary"
-   Primary: Charcoal  ·  Secondary: Spa-Sage
+   DESIGN SYSTEM — "Warm Ink"
+   Primary: Near-Black  ·  Accent: Sand Bronze
    Typography: Manrope (display) + Inter (body)
-   Principle: No hard borders · Tonal layering · Ambient light
+   Principle: Warm contrast · No competing colors · Restrained luxury
 ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Primary (Charcoal) ──────────────────────────────── */
-  --color-primary: #212b3a;
-  --color-primary-container: #374151;
-  --color-primary-light: #4b5563;
-  --color-on-primary: #ffffff;
+  /* ── Primary (Warm Near-Black) ───────────────────────── */
+  --color-primary: #0E0E0E;
+  --color-primary-container: #242424;
+  --color-primary-light: #3A3A3A;
+  --color-on-primary: #FFFFFF;
 
-  /* ── Secondary / Spa-Sage ────────────────────────────── */
-  --color-secondary: #506859;
-  --color-secondary-container: #cbe6d4;
-  --color-secondary-fixed: #d4eddc;
-  --color-secondary-dim: rgba(203, 230, 212, 0.18);
+  /* ── Accent / Sand Bronze ────────────────────────────── */
+  --color-accent: #C4A882;
+  --color-accent-light: #EDE0CC;
+  --color-accent-dim: rgba(196, 168, 130, 0.12);
+  --color-secondary: #8C7458;
+  --color-secondary-fixed: #EDE0CC;
 
-  /* ── Surface (Warm Off-white) ─────────────────────────── */
-  --surface: #f9f9f7;
-  --surface-dim: #f1f1ef;
-  --surface-container-low: #f4f4f2;
-  --surface-container: #ededeb;
-  --surface-container-high: #e6e6e4;
-  --surface-container-highest: #dfdfdd;
-  --surface-lowest: #ffffff;
+  /* ── Surface (Warm Ivory) ─────────────────────────────── */
+  --surface: #FAFAF8;
+  --surface-dim: #F2F1EE;
+  --surface-container-low: #F4F3F0;
+  --surface-container: #EEEDE9;
+  --surface-container-high: #E7E5E1;
+  --surface-container-highest: #DFDDD8;
+  --surface-lowest: #FFFFFF;
 
-  /* ── Text ─────────────────────────────────────────── */
-  --on-surface: #1a1c1a;
-  --on-surface-variant: #4b5563;
-  --outline-variant: rgba(75, 85, 99, 0.14);
+  /* ── Text ─────────────────────────────────────────────── */
+  --on-surface: #0E0E0E;
+  --on-surface-variant: #5C5C5C;
+  --outline-variant: rgba(14, 14, 14, 0.10);
 
-  /* ── On-dark text ─────────────────────────────────── */
-  --on-dark-high: rgba(255, 255, 255, 0.92);
-  --on-dark-mid: rgba(255, 255, 255, 0.60);
-  --on-dark-low: rgba(255, 255, 255, 0.36);
+  /* ── On-dark text ─────────────────────────────────────── */
+  --on-dark-high: rgba(255, 255, 255, 0.94);
+  --on-dark-mid: rgba(255, 255, 255, 0.58);
+  --on-dark-low: rgba(255, 255, 255, 0.30);
 
-  /* ── Typography ───────────────────────────────────── */
+  /* ── Typography ───────────────────────────────────────── */
   --font-display: 'Manrope', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
   --font-body: 'Inter', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
 
-  /* ── Spacing ──────────────────────────────────────── */
+  /* ── Spacing ──────────────────────────────────────────── */
   --section-py: 120px;
   --container-max: 1280px;
   --container-px: clamp(24px, 5vw, 80px);
 
-  /* ── Shape ────────────────────────────────────────── */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  /* ── Shape ────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
 
-  /* ── Ambient Elevation (no hard shadows) ──────────── */
-  --shadow-ambient: 0 8px 48px rgba(33, 43, 58, 0.05);
-  --shadow-ambient-md: 0 16px 64px rgba(33, 43, 58, 0.08);
-  --shadow-ambient-float: 0 32px 80px rgba(33, 43, 58, 0.07);
+  /* ── Elevation ────────────────────────────────────────── */
+  --shadow-ambient: 0 8px 40px rgba(14, 14, 14, 0.06);
+  --shadow-ambient-md: 0 16px 60px rgba(14, 14, 14, 0.09);
+  --shadow-ambient-float: 0 28px 72px rgba(14, 14, 14, 0.08);
 
-  /* ── Transitions ──────────────────────────────────── */
-  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  /* ── Transitions ──────────────────────────────────────── */
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* ── Hero bg image ────────────────────────────────── */
+  /* ── Hero bg image ────────────────────────────────────── */
   --hero-bg-image: none;
 }
 
@@ -103,15 +104,15 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   padding: var(--section-py) 0;
 }
 
-/* ── Section Label — sage bar + spaced caps ───────────── */
+/* ── Section Label ────────────────────────────────────── */
 .section-label {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-weight: 600;
+  letter-spacing: 0.20em;
   text-transform: uppercase;
   color: var(--color-secondary);
   margin-bottom: 20px;
@@ -121,21 +122,21 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   content: '';
   flex-shrink: 0;
   display: block;
-  width: 28px;
-  height: 2px;
-  background: var(--color-secondary-container);
+  width: 24px;
+  height: 1.5px;
+  background: var(--color-accent);
   border-radius: 2px;
 }
 
-/* ── Section Title ─────────────────────────────────────── */
+/* ── Section Title ────────────────────────────────────── */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.8vw, 44px);
+  font-size: clamp(28px, 3.6vw, 42px);
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-primary);
   margin-bottom: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .section-title--light {
@@ -148,80 +149,78 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
+  padding: 14px 32px;
   font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
   transition: var(--transition);
   white-space: nowrap;
   min-height: 48px;
   min-width: 48px;
-  position: relative;
+  cursor: pointer;
 }
 
-/* Primary: charcoal — use on light backgrounds */
+/* Primary: warm black */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
-  color: var(--on-primary);
-  box-shadow: 0 4px 20px rgba(33, 43, 58, 0.28);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 36px rgba(33, 43, 58, 0.38);
+  background: var(--color-primary-container);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(14, 14, 14, 0.22);
 }
 
-.btn-primary:active { transform: translateY(0); }
+.btn-primary:active { transform: translateY(0); box-shadow: none; }
 
-/* Sage — for dark/charcoal backgrounds */
+/* Gold/accent — for dark backgrounds */
 .btn-gold {
-  background: var(--color-secondary-container);
+  background: var(--color-accent);
   color: var(--color-primary);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .btn-gold:hover {
-  background: var(--color-secondary-fixed);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(80, 104, 89, 0.28);
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(196, 168, 130, 0.30);
 }
 
-.btn-gold:active { transform: translateY(0); }
+.btn-gold:active { transform: translateY(0); box-shadow: none; }
 
 /* Outline */
 .btn-outline {
-  border: 1.5px solid var(--color-secondary-container);
-  color: var(--color-secondary-container);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   background: transparent;
 }
 
 .btn-outline:hover {
-  background: var(--color-secondary-dim);
-  transform: translateY(-2px);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
 }
 
 .btn-outline--light {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.35);
   color: var(--on-dark-high);
 }
 
 .btn-outline--light:hover {
-  border-color: var(--color-secondary-container);
-  color: var(--color-secondary-container);
-  background: var(--color-secondary-dim);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
 }
 
 /* ── Scrollbar ───────────────────────────────────────── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--surface-container-low); }
-::-webkit-scrollbar-thumb { background: var(--on-surface-variant); border-radius: 3px; opacity: 0.3; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface-container-highest); border-radius: 4px; }
 
 /* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 767px) {
-  :root {
-    --section-py: 80px;
-  }
+  :root { --section-py: 80px; }
 }

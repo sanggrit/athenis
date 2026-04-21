@@ -1,15 +1,15 @@
-/* Dark section — charcoal gradient */
+/* Dark section — warm near-black */
 .dowmi {
-  background: linear-gradient(160deg, #212b3a 0%, #374151 60%, #1a2230 100%);
+  background: #0A0A0A;
 }
 
-/* Override section-label color for dark context */
+/* Override section-label for dark context */
 .dowmi :global(.section-label) {
-  color: var(--color-secondary-container);
+  color: var(--color-accent);
 }
 
 .dowmi :global(.section-label)::before {
-  background: var(--color-secondary-container);
+  background: var(--color-accent);
 }
 
 .header {
@@ -32,18 +32,18 @@
   margin-bottom: 0 !important;
 }
 
-/* Best Seller badge — sage pill */
+/* Best Seller badge */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 7px 16px;
-  background: var(--color-secondary-container);
+  padding: 6px 14px;
+  background: var(--color-accent);
   color: var(--color-primary);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
@@ -53,10 +53,11 @@
 
 .description {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
   color: var(--on-dark-mid);
   line-height: 1.85;
   max-width: 600px;
+  font-weight: 300;
 }
 
 /* ── Rankings carousel ───────────────────────────────── */
@@ -85,7 +86,7 @@
 
 .rankImgWrap {
   width: 100%;
-  background: var(--surface-lowest);
+  background: #141414;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   overflow: hidden;
 }
@@ -98,15 +99,15 @@
 
 .rankCaption {
   width: 100%;
-  padding: 16px 24px;
-  background: rgba(203, 230, 212, 0.10);
+  padding: 14px 24px;
+  background: rgba(196, 168, 130, 0.08);
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-secondary-container);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
   text-align: center;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 1.5;
 }
 
@@ -115,12 +116,12 @@
   position: absolute;
   top: 42%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(33, 43, 58, 0.75);
-  border: 1.5px solid rgba(203, 230, 212, 0.30);
-  color: var(--color-secondary-container);
+  background: rgba(14, 14, 14, 0.80);
+  border: 1px solid rgba(196, 168, 130, 0.25);
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,27 +132,27 @@
 }
 
 .carouselBtn:hover {
-  background: rgba(203, 230, 212, 0.15);
-  border-color: var(--color-secondary-container);
-  transform: translateY(-50%) scale(1.08);
+  background: rgba(196, 168, 130, 0.12);
+  border-color: var(--color-accent);
+  transform: translateY(-50%) scale(1.06);
 }
 
-.carouselBtnPrev { left: -24px; }
-.carouselBtnNext { right: -24px; }
+.carouselBtnPrev { left: -22px; }
+.carouselBtnNext { right: -22px; }
 
-/* Dot indicators */
+/* Dots */
 .carouselDots {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: rgba(203, 230, 212, 0.25);
+  background: rgba(196, 168, 130, 0.22);
   border: none;
   cursor: pointer;
   padding: 0;
@@ -159,7 +160,7 @@
 }
 
 .dotActive {
-  background: var(--color-secondary-container);
+  background: var(--color-accent);
   transform: scale(1.5);
 }
 
@@ -167,13 +168,13 @@
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 52px;
 }
 
-/* Tonal card — no border, background shift creates depth */
+/* Tonal product card */
 .productCard {
-  background: rgba(255, 255, 255, 0.05);
+  background: #141414;
   border-radius: var(--radius-md);
   overflow: hidden;
   display: flex;
@@ -182,15 +183,14 @@
 }
 
 .productCard:hover {
-  background: rgba(255, 255, 255, 0.09);
-  transform: translateY(-5px);
+  background: #1C1C1C;
+  transform: translateY(-4px);
 }
 
-/* Product image */
 .productImageWrap {
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
+  background: #1A1A1A;
   flex-shrink: 0;
 }
 
@@ -199,6 +199,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.productCard:hover .productImg {
+  transform: scale(1.04);
 }
 
 .productImgPlaceholder {
@@ -215,11 +220,10 @@
   font-family: var(--font-body);
   font-size: 11px;
   color: var(--on-dark-low);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* Product info */
 .productInfo {
   padding: 22px 20px;
   display: flex;
@@ -234,17 +238,18 @@
   font-weight: 700;
   color: var(--on-dark-high);
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .productDesc {
   font-family: var(--font-body);
   font-size: 13px;
   color: var(--on-dark-mid);
-  line-height: 1.7;
+  line-height: 1.75;
   flex: 1;
+  font-weight: 300;
 }
 
-/* Rating + price */
 .productMeta {
   display: flex;
   flex-direction: column;
@@ -258,11 +263,11 @@
   flex-wrap: wrap;
 }
 
-.stars { display: inline-flex; gap: 1px; }
+.stars { display: inline-flex; gap: 2px; }
 
 .star {
-  color: var(--color-secondary-container);
-  font-size: 14px;
+  color: var(--color-accent);
+  font-size: 13px;
   line-height: 1;
 }
 
@@ -274,36 +279,37 @@
 
 .price {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--color-secondary-container);
+  color: var(--color-accent);
   letter-spacing: -0.01em;
 }
 
 /* Amazon button */
 .amazonBtn {
   margin-top: auto;
-  padding: 10px 16px;
+  padding: 9px 16px;
   font-size: 11px;
-  border: 1.5px solid rgba(203, 230, 212, 0.35);
-  color: var(--color-secondary-container);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border: 1px solid rgba(196, 168, 130, 0.30);
+  color: var(--color-accent);
   background: transparent;
+  border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   gap: 6px;
   align-self: flex-start;
-  min-height: 40px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  min-height: 38px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .amazonBtn:hover {
-  border-color: var(--color-secondary-container);
-  background: var(--color-secondary-dim);
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
 }
 
 /* Store CTA */
@@ -318,12 +324,9 @@
 }
 
 @media (max-width: 767px) {
-  .products { grid-template-columns: 1fr; gap: 14px; }
-
+  .products { grid-template-columns: 1fr; gap: 12px; }
   .titleRow { flex-direction: column; gap: 12px; }
-
   .carouselOuter { margin-bottom: 44px; }
-
   .carouselBtnPrev { left: 8px; }
   .carouselBtnNext { right: 8px; }
 }

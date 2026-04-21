@@ -1,4 +1,4 @@
-/* Dark editorial hero — charcoal gradient */
+/* Dark editorial hero — warm near-black */
 .hero {
   position: relative;
   min-height: 100dvh;
@@ -12,27 +12,27 @@
   overflow: hidden;
 }
 
-/* Gradient overlay */
+/* Gradient overlay — warm ink, no harsh pure black */
 .overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 65% 25%, rgba(203, 230, 212, 0.06) 0%, transparent 55%),
-    linear-gradient(155deg, #212b3a 0%, #374151 55%, #1a2230 100%);
+    radial-gradient(ellipse at 70% 20%, rgba(196, 168, 130, 0.06) 0%, transparent 50%),
+    linear-gradient(160deg, #0E0E0E 0%, #1A1A18 50%, #0A0A0A 100%);
   z-index: 0;
 }
 
-/* Oversized decorative letterform */
+/* Decorative letterform */
 .hero::after {
   content: 'DOWMI';
   position: absolute;
-  right: -40px;
-  bottom: -30px;
+  right: -20px;
+  bottom: -20px;
   font-family: var(--font-display);
-  font-size: clamp(100px, 18vw, 240px);
+  font-size: clamp(90px, 16vw, 220px);
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.025);
-  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.022);
+  letter-spacing: 0.08em;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
@@ -43,21 +43,21 @@
 .content {
   position: relative;
   z-index: 1;
-  padding-top: 96px;
+  padding-top: 100px;
   padding-bottom: 60px;
 }
 
-/* Eyebrow — sage bar prefix */
+/* Eyebrow */
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-weight: 600;
+  letter-spacing: 0.20em;
   text-transform: uppercase;
-  color: var(--color-secondary-container);
+  color: var(--color-accent);
   margin-bottom: 28px;
 }
 
@@ -65,31 +65,32 @@
   content: '';
   flex-shrink: 0;
   display: block;
-  width: 28px;
-  height: 2px;
-  background: var(--color-secondary-container);
+  width: 24px;
+  height: 1.5px;
+  background: var(--color-accent);
   border-radius: 2px;
 }
 
-/* Display headline — Manrope editorial */
+/* Display headline */
 .slogan {
   font-family: var(--font-display);
-  font-size: clamp(36px, 6.5vw, 76px);
+  font-size: clamp(36px, 6vw, 72px);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
   color: var(--on-dark-high);
-  max-width: 820px;
+  max-width: 780px;
   margin-bottom: 28px;
 }
 
 .sub {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 19px);
+  font-size: clamp(15px, 1.5vw, 18px);
   color: var(--on-dark-mid);
-  max-width: 500px;
-  line-height: 1.75;
+  max-width: 480px;
+  line-height: 1.80;
   margin-bottom: 52px;
+  font-weight: 300;
 }
 
 .ctas {
@@ -110,13 +111,13 @@
 .scrollLine {
   display: block;
   width: 1px;
-  height: 56px;
-  background: linear-gradient(to bottom, transparent, rgba(203, 230, 212, 0.6), transparent);
-  animation: pulse 2.4s ease-in-out infinite;
+  height: 52px;
+  background: linear-gradient(to bottom, transparent, rgba(196, 168, 130, 0.55), transparent);
+  animation: pulse 2.6s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+  0%, 100% { opacity: 0.28; transform: scaleY(0.8); }
   50% { opacity: 1; transform: scaleY(1.1); }
 }
 
@@ -139,7 +140,7 @@
 
   .ctas .btn {
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
   }
 
   .scrollHint { display: none; }
